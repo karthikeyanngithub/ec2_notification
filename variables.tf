@@ -24,16 +24,13 @@ variable "cloud_watch_rule_name" {
 }
 
 variable "sender_mail" {
-	default = "sacoefrancis@gmail.com"
 	description = "email of the sender"
 }
 
 variable "recipient_mails" {
-	default = "[sacoefrancis@gmail.com, sacoefrancis@yahoo.com]"
 	description = "recipients email addresses"
 }
 
 variable "aws_region" {
-	default = "eu-west-1"
-	description = "sender aws region"
+	description = "aws region"
 }
