@@ -1,29 +1,17 @@
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "Stmt1612373634601",
-      "Action": "*",
-      "Effect": "Allow",
-      "Resource": "*"
-    },
-    {
-      "Sid": "Stmt1612373671830",
-      "Action": "*",
-      "Effect": "Allow",
-      "Resource": "*"
-    },
-    {
-      "Sid": "Stmt1612373733849",
-      "Action": "*",
-      "Effect": "Allow",
-      "Resource": "*"
-    },
-    {
-      "Sid": "Stmt1612374150108",
-      "Action": "*",
-      "Effect": "Allow",
-      "Resource": "*"
-    }
-  ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:GenerateCredentialReport",
+                "iam:GenerateServiceLastAccessedDetails",
+                "iam:Get*",
+                "iam:List*",
+                "iam:SimulateCustomPolicy",
+                "iam:SimulatePrincipalPolicy"
+            ],
+            "Resource": "*"
+        }
+    ]
 }
