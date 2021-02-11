@@ -47,7 +47,7 @@
                 {
             "Effect": "Allow",
             "Action": "logs:CreateLogGroup",
-            "Resource": "arn:aws:logs:us-west-2:461435671204:*"
+            "Resource": "arn:aws:logs:::*"
         },
         {
             "Effect": "Allow",
@@ -56,7 +56,7 @@
                 "logs:PutLogEvents"
             ],
             "Resource": [
-                "arn:aws:logs:us-west-2:461435671204:log-group:/aws/lambda/ec2_email_notification:*"
+                "arn:aws:logs:::log-group:/aws/lambda/ec2_email_notification:*"
             ]
         }
     ]
