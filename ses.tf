@@ -46,9 +46,8 @@ EOF
 }
 
 
-
 resource "aws_iam_policy_attachment" "ses_policy-attach" {
   name       = "ses_policy-attach"
-  users      = ["${aws_iam_user.support.name}"]
+  users      = ["${aws_iam_user.sender.name}"]
   policy_arn = aws_iam_policy.ses_policy_support.arn
 }
