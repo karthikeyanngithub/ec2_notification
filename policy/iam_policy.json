@@ -47,7 +47,7 @@
                 {
             "Effect": "Allow",
             "Action": "logs:CreateLogGroup",
-            "Resource": "arn:aws:logs:::*"
+            "Resource": "arn:aws:logs:*:*:*"
         },
         {
             "Effect": "Allow",
@@ -56,7 +56,7 @@
                 "logs:PutLogEvents"
             ],
             "Resource": [
-                "arn:aws:logs:::log-group:/aws/lambda/monitoring_ec2_status:*"
+                "arn:aws:logs:*:*:log-group:/aws/lambda/monitoring_ec2_status:*"
             ]
         }
     ]
