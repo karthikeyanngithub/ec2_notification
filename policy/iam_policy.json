@@ -56,7 +56,7 @@
                 "logs:PutLogEvents"
             ],
             "Resource": [
-                "arn:aws:logs:::log-group:/aws/lambda/ec2_email_notification:*"
+                "arn:aws:logs:::log-group:/aws/lambda/monitoring_ec2_status:*"
             ]
         }
     ]
