@@ -3,6 +3,37 @@
     "Statement": [
         {
             "Effect": "Allow",
+            "Action": "ec2:Describe*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "elasticloadbalancing:Describe*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloudwatch:ListMetrics",
+                "cloudwatch:GetMetricStatistics",
+                "cloudwatch:Describe*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "autoscaling:Describe*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ses:*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
             "Action": [
                 "iam:GenerateCredentialReport",
                 "iam:GenerateServiceLastAccessedDetails",
@@ -12,6 +43,21 @@
                 "iam:SimulatePrincipalPolicy"
             ],
             "Resource": "*"
+        },
+                {
+            "Effect": "Allow",
+            "Action": "logs:CreateLogGroup",
+            "Resource": "arn:aws:logs:us-west-2:461435671204:*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": [
+                "arn:aws:logs:us-west-2:461435671204:log-group:/aws/lambda/ec2_email_notification:*"
+            ]
         }
     ]
 }
